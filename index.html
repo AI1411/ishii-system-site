@@ -132,6 +132,49 @@
             margin-top: 60px;
         }
 
+        .experience-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .experience-table th,
+        .experience-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .experience-table th {
+            background: var(--secondary);
+            color: white;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .experience-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .experience-table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            padding: 4px 8px;
+            margin: 2px;
+            border-radius: 4px;
+            background: var(--secondary);
+            color: white;
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+
         .fade-up {
             opacity: 0;
             transform: translateY(20px);
@@ -159,6 +202,12 @@
             .card {
                 margin-bottom: 20px;
             }
+
+            .experience-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
         }
     </style>
 </head>
@@ -171,10 +220,13 @@
 
 <div class="container">
     <div class="content">
-        <div class="card" data-aos="fade-up">
+        <div class="card" data-aos="fade-up" style="grid-column: 1 / -1;">
             <h3>企業情報</h3>
             <div class="contact-info">
                 <p><strong>代表社員:</strong> 石井彰</p>
+            </div>
+            <div class="contact-info">
+                <p><strong>経験年数:</strong> 6年</p>
             </div>
             <div class="contact-info">
                 <p><strong>所在地:</strong><br>
@@ -192,41 +244,105 @@
             </a>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-            <h3>開発実績</h3>
-            <ul>
-                <li>銀行向けのポータルサイトのリプレイス</li>
-                <li>ガソリンスタンドアプリの新規開発</li>
-                <li>SNS管理アプリのリプレイス</li>
-                <li>クーポン機能の新規開発</li>
-                <li>大手スーパーECサイト新規開発</li>
-                <li>派遣のポータルサイトのリプレイス</li>
-                <li>口コミサイトの新規開発</li>
-            </ul>
-        </div>
-
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-            <h3>技術スタック</h3>
+        <div class="card" data-aos="fade-up" data-aos-delay="200" style="grid-column: 1 / -1;">
+            <h3>技術スタック(経験年数)</h3>
             <h4 style="color: var(--primary); margin: 15px 0 10px;">言語</h4>
             <ul>
-                <li>Go言語</li>
-                <li>Rust</li>
-                <li>PHP</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
+                <li>Go言語(4年)</li>
+                <li>PHP(2年)</li>
+                <li>JavaScript(6年)</li>
+                <li>TypeScript(4年)</li>
             </ul>
             <h4 style="color: var(--primary); margin: 15px 0 10px;">フレームワーク・ライブラリ</h4>
             <ul>
-                <li>Gin</li>
-                <li>Echo</li>
-                <li>gRPC</li>
-                <li>Laravel</li>
-                <li>React</li>
-                <li>Vue</li>
-                <li>Next.js</li>
-                <li>Nuxt.js</li>
+                <li>Gin(2年)</li>
+                <li>Echo(2年)</li>
+                <li>gRPC(1年)</li>
+                <li>Laravel(2年)</li>
+                <li>React(3年)</li>
+                <li>Vue(3年)</li>
+                <li>Next.js(1年)</li>
+                <li>Nuxt.js(3年)</li>
             </ul>
         </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="100" style="grid-column: 1 / -1;">
+            <h3>開発実績</h3>
+            <div style="overflow-x: auto;">
+                <table class="experience-table">
+                    <thead>
+                    <tr>
+                        <th>プロジェクト</th>
+                        <th>期間</th>
+                        <th>役割</th>
+                        <th>使用技術</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>銀行向けポータルサイトのリプレイス</td>
+                        <td>2023/04〜2024/10</td>
+                        <td>テックリード</td>
+                        <td>
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">Echo</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Nuxt.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ガソリンスタンドアプリ新規開発</td>
+                        <td>2022/09〜2023/03</td>
+                        <td>PG</td>
+                        <td>
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">gRPC</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>クーポン機能新規開発</td>
+                        <td>2021/04〜2022/08</td>
+                        <td>テックリード</td>
+                        <td>
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">Gin</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>大手スーパーECサイトの新規開発</td>
+                        <td>2020/01〜2021/03</td>
+                        <td>PG</td>
+                        <td>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Nuxt.js</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>派遣ポータルサイトのリプレイス</td>
+                        <td>2019/04〜2019/12</td>
+                        <td>PG</td>
+                        <td>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Nuxt.js</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>口コミサイト新規開発</td>
+                        <td>2018/04〜2019/03</td>
+                        <td>PG</td>
+                        <td>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Nuxt.js</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </div>
 </div>
 
